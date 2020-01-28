@@ -365,9 +365,9 @@ class AbstractOperation(SecureOperation, metaclass=abc.ABCMeta):
         function = uri_parsing_decorator(function)
 
         # NOTE: the security decorator should be applied last to check auth before anything else :-)
-        security_decorator = self.security_decorator
-        logger.debug('... Adding security decorator (%r)', security_decorator)
-        function = security_decorator(function)
+        # security_decorator = self.security_decorator
+        # logger.debug('... Adding security decorator (%r)', security_decorator)
+        # function = security_decorator(function)
 
         function = self._request_response_decorator(function)
 
